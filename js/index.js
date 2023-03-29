@@ -42,6 +42,9 @@ async function main() {
 async function getUserProfile() {
   var str = "";
   const profile = await liff.getProfile();
+  sessionStorage.setItem("LineID", profile.userId);
+  sessionStorage.setItem("LineName", profile.displayName);
+  sessionStorage.setItem("LinePicture", profile.pictureUrl);
   Connect_DB();
 }
 
@@ -78,9 +81,8 @@ function CheckData() {
   .limit(1)
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
+      CheckFoundData = 1;
       if(doc.data().statusconfirm==1) {
-	    CheckFoundData = 1;
-	    //alert("found");
         EidProfile = doc.id;
         //sessionStorage.setItem("EmpID_PRU", doc.data().empID);
         sessionStorage.setItem("EmpID_PRU", "82301");
@@ -90,9 +92,9 @@ function CheckData() {
         location.href = "https://liff.line.me/1655966947-KxrAqdyp";
       }
     });
-    //if(CheckFoundData==0) {
-    //  location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
-    //}
+    if(CheckFoundData==0) {
+      location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
+    }
   });
 }
 
