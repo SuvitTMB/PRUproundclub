@@ -17,14 +17,14 @@ $(document).ready(function () {
   str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile" width="100px"></div>';
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
-*/
-  main();
   Connect_DB();
   dbProfile = firebase.firestore().collection("CheckProfile");
   dbSellerCampaign = firebase.firestore().collection("SellerCampaign");
   dbPRUredeemPoint = firebase.firestore().collection("PRUredeempoint");
   dbPRUmember_log = firebase.firestore().collection("PRUmember_log");
   CheckData();
+*/
+  main();
 
 });
 
@@ -45,6 +45,11 @@ async function getUserProfile() {
   var str = "";
   const profile = await liff.getProfile();
   Connect_DB();
+  dbProfile = firebase.firestore().collection("CheckProfile");
+  dbSellerCampaign = firebase.firestore().collection("SellerCampaign");
+  dbPRUredeemPoint = firebase.firestore().collection("PRUredeempoint");
+  dbPRUmember_log = firebase.firestore().collection("PRUmember_log");
+  CheckData();
 }
 
 
