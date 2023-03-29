@@ -78,9 +78,9 @@ function CheckData() {
   .limit(1)
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
-      CheckFoundData = 1;
       if(doc.data().statusconfirm==1) {
-      	CheckFoundData = 1;
+	    CheckFoundData = 1;
+	    alert("found");
         EidProfile = doc.id;
         //sessionStorage.setItem("EmpID_PRU", doc.data().empID);
         sessionStorage.setItem("EmpID_PRU", "82301");
@@ -90,9 +90,9 @@ function CheckData() {
         location.href = "https://liff.line.me/1655966947-KxrAqdyp";
       }
     });
-    //if(CheckFoundData==0) {
-    //  location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
-    //}
+    if(CheckFoundData==0) {
+      location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
+    }
   });
 }
 
