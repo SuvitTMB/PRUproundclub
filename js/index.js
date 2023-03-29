@@ -5,7 +5,6 @@ var xProduct = "BALife";
 
 $(document).ready(function () {
 /*
-
   sessionStorage.clear(); 
   var str = "";
   var sLineID = "Ua6b6bf745bd9bfd01a180de1a05c23b3";
@@ -45,11 +44,6 @@ async function getUserProfile() {
   var str = "";
   const profile = await liff.getProfile();
   Connect_DB();
-  dbProfile = firebase.firestore().collection("CheckProfile");
-  dbSellerCampaign = firebase.firestore().collection("SellerCampaign");
-  dbPRUredeemPoint = firebase.firestore().collection("PRUredeempoint");
-  dbPRUmember_log = firebase.firestore().collection("PRUmember_log");
-  CheckData();
 }
 
 
@@ -60,7 +54,7 @@ function openWindow() {
   })
 }
 
-/*
+
 function Connect_DB() {
   var firebaseConfig = {
     apiKey: "AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE",
@@ -71,13 +65,13 @@ function Connect_DB() {
     appId: "1:653667385625:web:a5aed08500de80839f0588",
     measurementId: "G-9SKTRHHSW9"
   };
-  firebase.initializeApp(firebaseConfig);
   dbProfile = firebase.firestore().collection("CheckProfile");
-  dbttbMember = firebase.firestore().collection("ttbMember");
-  dbttbnewsLog = firebase.firestore().collection("ttbnewsLog");
+  dbSellerCampaign = firebase.firestore().collection("SellerCampaign");
+  dbPRUredeemPoint = firebase.firestore().collection("PRUredeempoint");
+  dbPRUmember_log = firebase.firestore().collection("PRUmember_log");
   CheckData();
 }
-*/
+
 
 var CheckFoundData = 0;
 function CheckData() {
