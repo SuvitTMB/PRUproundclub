@@ -2,6 +2,9 @@ var i = 0;
 var EidProfile = "";
 var dateString = "";
 var xProduct = "BALife";
+var CheckFoundData = 0;
+
+
 
 $(document).ready(function () {
 /*
@@ -73,7 +76,6 @@ function Connect_DB() {
 }
 
 
-var CheckFoundData = 0;
 function CheckData() {
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .limit(1)
