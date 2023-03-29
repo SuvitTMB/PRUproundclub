@@ -80,7 +80,7 @@ function CheckData() {
     snapshot.forEach(doc=> {
       if(doc.data().statusconfirm==1) {
 	    CheckFoundData = 1;
-	    alert("found");
+	    //alert("found");
         EidProfile = doc.id;
         //sessionStorage.setItem("EmpID_PRU", doc.data().empID);
         sessionStorage.setItem("EmpID_PRU", "82301");
