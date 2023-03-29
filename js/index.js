@@ -7,6 +7,7 @@ var CheckFoundData = 0;
 
 
 $(document).ready(function () {
+
 /*
   sessionStorage.clear(); 
   var str = "";
@@ -20,11 +21,6 @@ $(document).ready(function () {
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
   Connect_DB();
-  dbProfile = firebase.firestore().collection("CheckProfile");
-  dbSellerCampaign = firebase.firestore().collection("SellerCampaign");
-  dbPRUredeemPoint = firebase.firestore().collection("PRUredeempoint");
-  dbPRUmember_log = firebase.firestore().collection("PRUmember_log");
-  CheckData();
 */
   main();
 
@@ -68,6 +64,7 @@ function Connect_DB() {
     appId: "1:653667385625:web:a5aed08500de80839f0588",
     measurementId: "G-9SKTRHHSW9"
   };
+  firebase.initializeApp(firebaseConfig);
   dbProfile = firebase.firestore().collection("CheckProfile");
   dbSellerCampaign = firebase.firestore().collection("SellerCampaign");
   dbPRUredeemPoint = firebase.firestore().collection("PRUredeempoint");
