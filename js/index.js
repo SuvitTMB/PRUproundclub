@@ -77,6 +77,8 @@ function Connect_DB() {
 
 
 function CheckData() {
+	alert(sessionStorage.getItem("LineID")+"\n"+sessionStorage.getItem("LineName")+"\n"+sessionStorage.getItem("LinePicture"));
+/*
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .limit(1)
   .get().then((snapshot)=> {
@@ -96,6 +98,7 @@ function CheckData() {
       location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
     }
   });
+*/
 }
 
 
