@@ -90,9 +90,9 @@ function CheckData() {
         location.href = "https://liff.line.me/1655966947-KxrAqdyp";
       }
     });
-    if(CheckFoundData==0) {
-      location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
-    }
+    //if(CheckFoundData==0) {
+    //  location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
+    //}
   });
 }
 
