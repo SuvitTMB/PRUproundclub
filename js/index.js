@@ -45,7 +45,6 @@ async function getUserProfile() {
   sessionStorage.setItem("LineID", profile.userId);
   sessionStorage.setItem("LineName", profile.displayName);
   sessionStorage.setItem("LinePicture", profile.pictureUrl);
-	alert(sessionStorage.getItem("LineID")+"\n"+sessionStorage.getItem("LineName")+"\n"+sessionStorage.getItem("LinePicture"));
   Connect_DB();
 }
 
@@ -73,12 +72,12 @@ function Connect_DB() {
   dbSellerCampaign = firebase.firestore().collection("SellerCampaign");
   dbPRUredeemPoint = firebase.firestore().collection("PRUredeempoint");
   dbPRUmember_log = firebase.firestore().collection("PRUmember_log");
-  //CheckData();
+  CheckData();
 }
 
 
 function CheckData() {
-/*
+
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .limit(1)
   .get().then((snapshot)=> {
@@ -91,14 +90,16 @@ function CheckData() {
         sessionStorage.setItem("EmpName_PRU", doc.data().empName);
         CheckMember();
       } else {
-        location.href = "https://liff.line.me/1655966947-KxrAqdyp";
+	alert("111"+sessionStorage.getItem("LineID")+"\n"+sessionStorage.getItem("LineName")+"\n"+sessionStorage.getItem("LinePicture"));
+        //location.href = "https://liff.line.me/1655966947-KxrAqdyp";
       }
     });
     if(CheckFoundData==0) {
-      location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
+	alert("222"+sessionStorage.getItem("LineID")+"\n"+sessionStorage.getItem("LineName")+"\n"+sessionStorage.getItem("LinePicture"));
+      //location.href = "https://liff.line.me/1655966947-KxrAqdyp"; 
     }
   });
-*/
+
 }
 
 
