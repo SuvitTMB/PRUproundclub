@@ -45,6 +45,7 @@ async function getUserProfile() {
   sessionStorage.setItem("LineID", profile.userId);
   sessionStorage.setItem("LineName", profile.displayName);
   sessionStorage.setItem("LinePicture", profile.pictureUrl);
+	alert(sessionStorage.getItem("LineID")+"\n"+sessionStorage.getItem("LineName")+"\n"+sessionStorage.getItem("LinePicture"));
   Connect_DB();
 }
 
@@ -72,12 +73,11 @@ function Connect_DB() {
   dbSellerCampaign = firebase.firestore().collection("SellerCampaign");
   dbPRUredeemPoint = firebase.firestore().collection("PRUredeempoint");
   dbPRUmember_log = firebase.firestore().collection("PRUmember_log");
-  CheckData();
+  //CheckData();
 }
 
 
 function CheckData() {
-	alert(sessionStorage.getItem("LineID")+"\n"+sessionStorage.getItem("LineName")+"\n"+sessionStorage.getItem("LinePicture"));
 /*
   dbProfile.where('lineID','==',sessionStorage.getItem("LineID"))
   .limit(1)
