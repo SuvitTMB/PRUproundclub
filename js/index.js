@@ -8,7 +8,7 @@ var CheckFoundData = 0;
 
 $(document).ready(function () {
 
-/*
+
   sessionStorage.clear(); 
   var str = "";
   var sLineID = "Ua6b6bf745bd9bfd01a180de1a05c23b3";
@@ -21,8 +21,8 @@ $(document).ready(function () {
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
   Connect_DB();
-*/
-  main();
+
+  //main();
 
 });
 
@@ -80,6 +80,7 @@ function CheckData() {
     snapshot.forEach(doc=> {
       CheckFoundData = 1;
       if(doc.data().statusconfirm==1) {
+      	CheckFoundData = 1;
         EidProfile = doc.id;
         //sessionStorage.setItem("EmpID_PRU", doc.data().empID);
         sessionStorage.setItem("EmpID_PRU", "82301");
