@@ -4,8 +4,6 @@ var dateString = "";
 var xProduct = "BALife";
 var CheckFoundData = 0;
 
-
-
 $(document).ready(function () {
 
 /*
