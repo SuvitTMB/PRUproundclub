@@ -149,7 +149,7 @@ function LoadReward() {
         //str += '<p class="percent">'+RatioPoint.toFixed(2)+'%</p></div></div></div></div>';
         str += '<div class="boxvdo-line10" style="width:62%; float: left; padding:2px;line-height: 1.1; min-height: 60px; overflow: hidden;"><div class="boxvdo-header">'+doc.data().StockName+'</div>'+doc.data().StockDetail+'</div>';
         if(sessionStorage.getItem("ActivePoint")!="NaN") {
-          str += '<div class="boxvdo-line2"><div class="btn-t2-ok" style="font-size:13px;">ใช้ '+addCommas(doc.data().PointRedeem)+' PRU Point</div></div>'; 
+          str += '<div class="boxvdo-line2"><div class="btn-t2-block" style="font-size:13px;">ใช้ '+addCommas(doc.data().PointRedeem)+' PRU Point</div></div>'; 
         }
         str += '<div class="clr"></div></div>';
       } else {
