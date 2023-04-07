@@ -274,7 +274,6 @@ input[type="radio"]:checked + label:after {
     font-size: 12px;
     cursor: pointer;
     min-width:120px;
-    letter-spacing: 2px;
 }
 
 .btn-t2:focus, .btn-t2:hover, a.btn-t2:focus, a.btn-t2:hover {
@@ -444,7 +443,6 @@ input[type="radio"]:checked + label:after {
     font-size: 13px;
     cursor: pointer;
     min-width:140px !important;
-    letter-spacing: 2px;
 }
 
 .btn-t3:focus, .btn-t3:hover, a.btn-t3:focus, a.btn-t3:hover {
@@ -642,7 +640,6 @@ input[type="radio"]:checked + label:after {
     color: #ffffff;
     font-size: 13px;
     cursor: default;
-    letter-spacing: 2px;
 }
 
 

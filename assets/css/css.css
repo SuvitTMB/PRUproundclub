@@ -158,7 +158,6 @@
     cursor: default;
     font-weight: 600;
     /*min-width:140px !important;*/
-    letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
@@ -270,11 +269,23 @@
   background: #0156d4;
 }
 
+.btn-t2-block {
+  display: inline-block;
+  background-color: #9aa1a7;
+  color:#333;
+  border: 2px solid #7c868f;
+  padding: 7px 20px;
+  transition: 0.3s;
+  font-size: 13px; font-weight: 600;
+  border-radius: 4px;
+  margin:3px; line-height: 1.2;
+}
+
 .btn-t2-ok {
   display: inline-block;
-  background-color: #f2d8bd;
+  background-color: #fea8b0;
   color:#333;
-  border: 2px solid #e1c1a1;
+  border: 2px solid #db8f96;
   padding: 7px 20px;
   transition: 0.3s;
   font-size: 13px; font-weight: 600;
@@ -284,12 +295,12 @@
 .btn-t2-ok:hover {
   cursor: pointer;
   color:#fff;
-  background: #f68b1f;
+  background: #ee6673;
 }
 
 .btn-t2-no {
   display: inline-block;
-  background-color: #abe4b8;
+  background-color: #4ee671;
   color:#333;
   border: 2px solid #7dc78e;
   padding: 7px 20px;
@@ -298,11 +309,13 @@
   border-radius: 4px;
   margin:3px; line-height: 1.2;
 }
-.btn-t2-ok:hover {
+
+.btn-t2-no:hover {
   cursor: pointer;
   color:#fff;
-  background: #f68b1f;
+  background: #18bc3e;
 }
+
 
 .btn-t2-red {
   display: inline-block;
